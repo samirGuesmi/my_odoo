@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Documentation technique pour le module comptable tunisien : 'l10n_tn'</title>
+</head>
+
+<body>
+<h1>Documentation technique pour le module comptable tunisien : 'l10n_tn'</h1>
+
+<h2>Montant de la facture en toute lettre</h2>
+
+<p>Pour les besoins du fichier 'account_invoice.py' et plus particulièrement du monatnt de la facture en toute lettre
+    ('amount_to_text'), il faut :
+<ul>
+    <li>Installer la librairie 'num2words' sous 'python2.7/lib' pour windows XP ou version
+        supérieure.
+    </li>
+    <li>Pour les distributions linux, il suffit d'éxecuter la ligne de commande qui suit en mode root :
+        <pre>
+            $ sudo su
+            $ apt-get install python-pip
+            $ pip install num2words</pre>
+    </li>
+</ul>
+</p>
+
+<p> document à finaliser à partir de la page officielle du ministère des finances. Attention, les montants mentionnés n'ont toujours pas été mis-à-jour en rapport avec la loi des finances de 2015 et encore moins de celle de 2016 (http://www.impots.finances.gov.tn/documentation/doc_fisc_fr.htm).</p>
+<h2>Calculs et règles générales pour la TCL (Taxes au Profit des Collectivités Locales)</h2>
+
+<h3>Personnes imposables</h3>
+
+<p>Sont redevables de la TCL :
+<ul>
+    <li>Les personnes morales soumises à l’impôt sur les sociétés;</li>
+    <li>Les personnes physiques soumises à l’impôt sur le revenu au titre des bénéfices industriels et commerciaux et
+        des bénéfices des professions non commerciales;
+    </li>
+    <li>les groupements d’intérêt économiques, les associations en participation et les sociétés de personnes exerçant
+        une activité commerciale ou une profession non commerciale.
+    </li>
+</ul>
+La TCL est due même en cas d’exonération de l’impôt sur les sociétés (IS) ou de l’impôt sur le revenu (IR).</p>
+<h3>Personnes exonérées</h3>
+
+<p>Sont exonérés de la TCL:
+<ul>
+    <li>Les personnes non établies et non domiciliées en Tunisie;</li>
+    <li>Les établissements touristiques soumis à la taxe hôtelière ;</li>
+    <li>Certains établissements en vertu de textes législatifs spéciaux ou de conventions particulières</li>
+</ul>
+</p>
+<h3>Assiette et taux de la TCL</h3>
+
+<p>La TCL est due aux taux de :
+<ul>
+    <li>0,2% du chiffre d’affaires brut local ;</li>
+    <li>25 % de l’impôt sur le revenu pour les personnes soumises à l’impôt sur le revenu selon le régime forfaitaire
+        ;
+    </li>
+    <li>25 % du minimum de l’IR ou de l’IS prévu par les articles 44 et 49 du code de l'IRPP et de l'IS pour les
+        entreprises déficitaires;
+    </li>
+    <li>25 % de l'impôt dû pour les entreprises dont la marge bénéficiaire brute n'excède pas 4% en vertu d'un texte
+        réglementaire.
+    </li>
+</ul>
+</p>
+<h3>Minimum et maximum de la TCL</h3>
+
+<p>
+<ul>
+    <li>La TCL due au titre d'une année ne peut être inférieure à la taxe sur les immeubles bâtis due à raison des
+        locaux affectés à l'exploitation et calculée conformément au décret n°2007-1187 du 14 Mai 2007.
+    </li>
+    <li>La TCL due au titre d'une année ne peut excéder un montant égal à 100.000D par entreprise.(Décret n°2006-3360 du
+        25/12/2006).
+    </li>
+</ul>
+Lorsque le minimum excède le maximum c’est le minimum qui est dû.
+</p>
+<h3>Mode de paiement de la taxe</h3>
+
+<p>La TCL due sur la base de 0,2% du chiffre d'affaires est payée au vu d'une déclaration mensuelle durant :
+<ul>
+    <li>les 15 premiers jours du mois qui suit le mois au cours duquel le chiffre d’affaires est réalisé pour les
+        personnes physiques;
+    </li>
+    <li>Les 28 premiers jours du même mois pour les personnes morales.</li>
+</ul>
+Toutefois :
+<ul>
+    <li>Pour les forfaitaires, la TCL est payée dans les mêmes délais de paiement de l'impôt annuel forfaitaire et des
+        acomptes provisionnels.
+    </li>
+    <li>Pour les entreprises déficitaires et les entreprises dont la marge bénéficiaire brute n'excède pas 4% en vertu
+        d'un texte réglementaire, la TCL, est payée dans les mêmes délais de paiement de l'IR ou de l'IS.
+    </li>
+</ul>
+</p>
+<h3>Répartition de la taxe</h3>
+
+<p>Pour les entreprises à établissements multiples, la part de la TCL revenant à chaque collectivité locale est
+    déterminée en fonction de la superficie couverte de l'établissement situé sur son territoire par rapport à la
+    superficie totale des locaux affectés à l'exploitation. Elle ne peut être inférieure au minimum de la taxe sur les
+    immeubles bâtis.
+</p>
+
+<h3>Recouvrement, Contrôle, contentieux et sanctions</h3>
+
+<p>Le contrôle, le recouvrement, le contentieux et les sanctions s’effectuent comme en matière d’impôt sur le revenu
+    des personnes physiques ou d’impôt sur les sociétés et conformément au code des droits et procédures fiscaux.</p>
+
+
+<h2>Calculs et règles générales pour le droit de timbre sur facture et le droit de timbre en général</h2>
+
+<p>Le droit de timbre sur facture couvre toutes les factures y compris les factures partielles ainsi que les factures
+    d'avoir. Pour toute facture, il faut prévoir un timbre sur facture additionnel de 0,500 dinars. Plus généralement
+    encore :</p>
+
+<h3>Droit de timbre</h3>
+
+<p>Le droit de timbre (en général et non-seulement le droit de timbre sur facture) est exigible sur plusieurs actes,
+    écrits et formules administratives, ce droit varie entre 0.300 D
+    et 100 D. Il est dû notamment sur :
+<ul>
+    <li>Les cartes et les opérations de recharge du téléphone: 0.300 D par 5 dinars ou fraction de 5 dinars du montant
+        de la carte ou du chiffre d'affaire.
+    </li>
+    <li>Les actes et écrits soumis à un droit d’enregistrement proportionnel ou progressif, ainsi que les expéditions de
+        ces actes et écrits et les expéditions des actes notariés : 2 dinars par feuille.
+    </li>
+    <li>La lettre de change se prêtant à la lecture électronique: 0.300 D</li>
+    <li>Les factures : 0.500 D par facture,</li>
+    <li>Les services rendus par l’Etat sous forme d’autorisation ou d’attestation et non soumis à des droits ou à des
+        redevances : 1 dinar,
+    </li>
+    <li>Le titre de crédit : 10 dinars,</li>
+    <li>La carte d’identité nationale : 2 dinars,</li>
+    <li>Bulletin n°3 du casier judiciaire : 2 dinars,</li>
+    <li>La carte de séjour des étrangers : 10 dinars,</li>
+    <li>Les certificats de visite technique justifiant la validité des moyens de transport pour la circulation: 7
+        dinars.
+    </li>
+    <li>Les certificats trimestriels de visite technique justifiant la validité des voitures de taxis, louages et
+        transport public rural âgés de plus de 10 ans pour la circulation : 3,500 dinars.
+    </li>
+    <li>Les passeports délivrés aux :
+        <ul>
+            <li>enfants de moins de 7 ans, élèves et étudiants : 20 dinars,</li>
+            <li>autres personnes : 60 dinars.</li>
+        </ul>
+    </li>
+    <li>les arrêtés d’autorisation d’ouverture de débits de boissons alcooliques : 100 dina</li>
+</ul>
+</p>
+<h3>Exonérations du droit de timbre</h3>
+
+<p>Sont exonérés du droit de timbre notamment les actes et écrits suivants:
+<ul>
+    <li>les actes et écrits pour lesquels le droit de timbre est légalement et définitivement à la charge exclusive de
+        l’Etat,
+    </li>
+    <li>les registres de l’Etat civil,</li>
+    <li>les registres brouillard des notaires,</li>
+    <li>les documents dématérialisés constituant la liasse unique à l’importation et à l’exportation,</li>
+    <li>les factures quittances émises par la société tunisienne d’électricité et de gaz et la société nationale de
+        distribution des eaux et l’office national des postes,
+    </li>
+    <li>les factures relatives à des opérations d’exportation,</li>
+    <li>le renouvellement de la carte d’identité nationale pour mentionner exclusivement la qualité de donateur
+        d’organes humains ou pour y renoncer,
+    </li>
+    <li>les attestations et les autorisations délivrées par l’Etat et prévues par la législation fiscale en vigueur.
+    </li>
+    <li>les actes et écrits soumis à un droit fixe d’enregistrement.</li>
+</ul>
+</p>
+<h2>Calculs et règles générales pour le droit d'enregistrement</h2>
+<h3>Droits d'enregistrement</h3>
+
+<p>La formalité de l’enregistrement est souvent accompagnée par la perception de droits fixes, progressifs ou
+    proportionnels.
+    Les principaux actes soumis à la formalité de l’enregistrement et leur régime d’enregistrement :
+<ol>
+    <li>Vente d’immeubles : 5%. et certaines acquisitions bénéficient de régimes de faveur :
+        <ul>
+            <li>acquisitions auprès des promoteurs immobiliers de bâtiments ou terrains aménagés pour l’exercice
+                d’activités économiques bénéficiant des dispositions du code d’incitation aux investissements ou à usage
+                d’habitation : droit fixe de 15D page/copie,
+            </li>
+            <li>acquisitions de lots de terrains ou de bâtiments aménagés conformément aux plans d’aménagement urbain
+                pour l’exercice d’activité économique bénéficiant des dispositions du code d’incitation aux
+                investissements : droit fixe de 15D page/copie,
+            </li>
+            <li>acquisitions de terrains destinés à la construction d’immeubles individuels à usage d’habitation et ce
+                dans la limite de 600 m2 : droit progressif fixé à 1%, 2% et 3% selon la superficie du lot.
+            </li>
+        </ul>
+    </li>
+    <li>Vente de fonds de commerce ou de clientèle : 2.5% du prix de vente.</li>
+    <li>Echange d’immeubles : 2.5% ; la soulte est soumise au taux de 5%,</li>
+    <li>Partage : 0.5% de l’actif net à partager, la soulte est soumise au droit proportionnel exigible sur les
+        mutations de biens.
+    </li>
+    <li>Locations d’immeubles autres que ceux destinés à l’habitation et la location de fonds de commerce : 1% du
+        montant du loyer annuel,
+    </li>
+    <li>Successions: droit variant entre 2.5% et 35 % selon le degré de parenté</li>
+    <li>Donations :
+        <ul>
+            <li>donations de biens entre ascendants et descendants et entre époux : droit fixe de 15 dinars par acte,
+            </li>
+            <li>autres donations : droit variant entre 5% et 35% selon le degré de parenté.</li>
+        </ul>
+    </li>
+    <li>Actes de constitution de sociétés et de groupements d’intérêt économique,d’augmentation ou de réduction de leur
+        capital, de prorogation de leur durée, de leur transformation et leur dissolution qui ne comportent pas
+        obligation,libération ou transmission de biens meubles ou immeubles entre les associés, membres ou autres
+        personnes : 100 dinars par acte,
+    </li>
+    <li>Concessions et marchés : 15D page/copie plafonné à 2% de leur valeur toutes taxes comprises ,</li>
+    <li>Leasing : 15D page/copie (Remarque : Il ne peut être perçu moins de 15 dinars pour l'enregistrement des actes et
+        mutations dont les sommes et valeurs produiraient moins de 15 dinars de droit proportionnel ou de droit
+        progressif.).
+    </li>
+    <li>Jugements et arrêts : 5 % du montant des condamnations ou liquidations. Toutefois, les parties non condamnées
+        aux dépens bénéficient de l’enregistrement au droit minimum fixé entre 15 D et 60D selon le degré de juridiction
+        et elles demeurent tenues de payer les droits proportionnels sur les montants perçus au titre de l’exécution de
+        la décision judiciaire.Cependant, si le montant de la condamnation ou de la liquidation ne dépasse pas les 3000
+        dinars le droit minimum payé devient libératoire du droit proportionnel.
+    </li>
+</ol>
+
+</p>
+
+
+<h3> Exonérations des droits d'enregistrement</h3>
+
+<p>
+<ul>
+    <li>Les contrats de mariage lorsque la dot servie par l’époux n’excède pas 200 dinars.</li>
+    <li>Les contrats de micro crédits accordés par les associations.</li>
+    <li>Les contrats par lesquels l’agriculteur s’engage à produire des produits agricoles et à les vendre à une autre
+        partie qui s’oblige à les acheter.
+    </li>
+    <li>Les contrats de location des terres agricoles pour une durée minimale de trois ans á condition de l'engagement
+        du locataire dans le contrat de location de les réserver aux grandes cultures.
+    </li>
+</ul>
+Sont exonérés des droits d’enregistrement sur les successions :
+<ul>
+    <li>la transmission des actifs et des titres des entreprises à condition que les héritiers et légataires s’engagent
+        à continuer l’exploitation de l’entreprise pour une période de 3 ans au moins ,
+    </li>
+    <li>la mutation des immeubles agricoles à condition que les héritiers produisent un engagement stipulant le maintien
+        de la dite propriété agricole en co-propriété et son exploitation d’une manière collective durant une période de
+        15 ans au moins,
+    </li>
+    <li>l’habitation principale du défunt dans la limite de 1000 m2 de superficie y compris les dépendances bâties et
+        non bâties,
+    </li>
+    <li>le capital décès, les rentes et les sommes revenant aux ayants droit en vertu de la législation en vigueur en
+        matière de couverture sociale ou au titre des contrats d’assurance-vie.
+    </li>
+</ul>
+</p>
+
+
+</body>
+</html>

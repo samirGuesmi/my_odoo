@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Tax Code Configuration (version générique) -->
+        <record id="vat_code_chart_root" model="account.tax.code.template">
+            <field name="name">Plan de Taxes Tunisie</field>
+            <field name="code"></field>
+            <field name="sign"></field>
+            <field name="parent_id" ref=""/>
+        </record>
+
+            <record id="tax_col_ht" model="account.tax.code.template">
+                <field name="name">Base H.T. TVA collectée</field>
+                <field name="code">a)</field>
+                <field name="sign">1.00</field>
+                <field name="parent_id" ref="vat_code_chart_root"/>
+            </record>
+
+                    <record id="tax_col_12_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 12.0%</field>
+                        <field name="code">TVA collectée 12.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col_ht"/>
+                    </record>
+                    
+                    <record id="tax_col_13_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 13.0%</field>
+                        <field name="code">TVA collectée 13.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col_ht"/>
+                    </record>
+
+                    <record id="tax_col_18_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 18.0%</field>
+                        <field name="code">TVA collectée 18.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col_ht"/>
+                    </record>
+                    
+                    <record id="tax_col_19_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 19.0%</field>
+                        <field name="code">TVA collectée 19.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col_ht"/>
+                    </record>
+
+                    <record id="tax_col_60_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 6.0%</field>
+                        <field name="code">TVA collectée 6.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col_ht"/>
+                    </record>
+                    
+                    <record id="tax_col_70_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 7.0%</field>
+                        <field name="code">TVA collectée 7.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col_ht"/>
+                    </record>
+
+                    <record id="tax_col_225_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 22.5%</field>
+                        <field name="code">TVA collectée 22.5% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col_ht"/>
+                    </record>
+
+                    <record id="tax_col_15_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 15.0%</field>
+                        <field name="code">TVA collectée 15.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col_ht"/>
+                    </record>
+
+                    <record id="tax_col_70_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 7.0%</field>
+                        <field name="code">TVA collectée 7.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col_ht"/>
+                    </record>
+
+
+            <record id="tax_col" model="account.tax.code.template">
+                <field name="name">TVA collectée</field>
+                <field name="code">b)</field>
+                <field name="sign">1.00</field>
+                <field name="parent_id" ref="vat_code_chart_root"/>
+            </record>
+
+                    <record id="tax_col_12" model="account.tax.code.template">
+                        <field name="name">TVA 12.0%</field>
+                        <field name="code">TVA collectée 12.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col"/>
+                    </record>
+                    
+                    <record id="tax_col_13" model="account.tax.code.template">
+                        <field name="name">TVA 13.0%</field>
+                        <field name="code">TVA collectée 13.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col"/>
+                    </record>
+
+                    <record id="tax_col_18" model="account.tax.code.template">
+                        <field name="name">TVA 18.0%</field>
+                        <field name="code">TVA collectée 18.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col"/>
+                    </record>
+                    
+                    <record id="tax_col_19" model="account.tax.code.template">
+                        <field name="name">TVA 19.0%</field>
+                        <field name="code">TVA collectée 19.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col"/>
+                    </record>
+
+                    <record id="tax_col_60" model="account.tax.code.template">
+                        <field name="name">TVA 6.0%</field>
+                        <field name="code">TVA collectée 6.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col"/>
+                    </record>
+
+                    <record id="tax_col_225" model="account.tax.code.template">
+                        <field name="name">TVA 22.5%</field>
+                        <field name="code">TVA collectée 22.5%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col"/>
+                    </record>
+
+                    <record id="tax_col_15" model="account.tax.code.template">
+                        <field name="name">TVA 15.0%</field>
+                        <field name="code">TVA collectée 15.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col"/>
+                    </record>
+
+                    <record id="tax_col_70" model="account.tax.code.template">
+                        <field name="name">TVA 7.0%</field>
+                        <field name="code">TVA collectée 7.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_col"/>
+                    </record>
+
+            <record id="tax_deduc_ht" model="account.tax.code.template">
+                <field name="name">Base H.T. TVA déductible</field>
+                <field name="code">c)</field>
+                <field name="sign">1.00</field>
+                <field name="parent_id" ref="vat_code_chart_root"/>
+            </record>
+
+                    <record id="tax_deduc_12_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 12.0%</field>
+                        <field name="code">TVA déductible 12.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc_ht"/>
+                    </record>
+
+                    <record id="tax_deduc_13_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 13.0%</field>
+                        <field name="code">TVA déductible 13.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc_ht"/>
+                    </record>
+
+                    <record id="tax_deduc_18_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 18.0%</field>
+                        <field name="code">TVA déductible 18.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc_ht"/>
+                    </record>
+                    
+                    <record id="tax_deduc_19_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 19.0%</field>
+                        <field name="code">TVA déductible 19.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc_ht"/>
+                    </record>
+
+                    <record id="tax_deduc_60_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 6.0%</field>
+                        <field name="code">TVA déductible 6.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc_ht"/>
+                    </record>
+
+                    <record id="tax_deduc_225_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 22.5%</field>
+                        <field name="code">TVA déductible 22.5% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc_ht"/>
+                    </record>
+
+                    <record id="tax_deduc_15_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 15.0%</field>
+                        <field name="code">TVA déductible 15.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc_ht"/>
+                    </record>
+
+                    <record id="tax_deduc_70_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 7.0%</field>
+                        <field name="code">TVA déductible 7.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc_ht"/>
+                    </record>
+
+            <record id="tax_deduc" model="account.tax.code.template">
+                <field name="name">TVA déductible</field>
+                <field name="code">d)</field>
+                <field name="sign">1.00</field>
+                <field name="parent_id" ref="vat_code_chart_root"/>
+            </record>
+
+                    <record id="tax_deduc_12" model="account.tax.code.template">
+                        <field name="name">TVA 12.0%</field>
+                        <field name="code">TVA déductible 12.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc"/>
+                    </record>
+                    
+                    <record id="tax_deduc_13" model="account.tax.code.template">
+                        <field name="name">TVA 13.0%</field>
+                        <field name="code">TVA déductible 13.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc"/>
+                    </record>
+
+                    <record id="tax_deduc_18" model="account.tax.code.template">
+                        <field name="name">TVA 18.0%</field>
+                        <field name="code">TVA déductible 18.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc"/>
+                    </record>
+                    
+                    <record id="tax_deduc_19" model="account.tax.code.template">
+                        <field name="name">TVA 19.0%</field>
+                        <field name="code">TVA déductible 19.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc"/>
+                    </record>
+
+                    <record id="tax_deduc_60" model="account.tax.code.template">
+                        <field name="name">TVA 6.0%</field>
+                        <field name="code">TVA déductible 6.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc"/>
+                    </record>
+
+                    <record id="tax_deduc_225" model="account.tax.code.template">
+                        <field name="name">TVA 22.5%</field>
+                        <field name="code">TVA déductible 22.5%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc"/>
+                    </record>
+
+                    <record id="tax_deduc_15" model="account.tax.code.template">
+                        <field name="name">TVA 15.0%</field>
+                        <field name="code">TVA déductible 15.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc"/>
+                    </record>
+
+                    <record id="tax_deduc_70" model="account.tax.code.template">
+                        <field name="name">TVA 7.0%</field>
+                        <field name="code">TVA déductible 7.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_deduc"/>
+                    </record>
+
+            <record id="tax_imm_ht" model="account.tax.code.template">
+                <field name="name">Base H.T. TVA déductible pour immobilisations</field>
+                <field name="code">e)</field>
+                <field name="sign">1.00</field>
+                <field name="parent_id" ref="vat_code_chart_root"/>
+            </record>
+
+                    <record id="tax_imm_12_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 12.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 12.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm_ht"/>
+                    </record>
+                    
+                    <record id="tax_imm_13_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 13.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 13.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm_ht"/>
+                    </record>
+
+                    <record id="tax_imm_18_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 18.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 18.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm_ht"/>
+                    </record>
+                    
+                    <record id="tax_imm_19_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 19.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 19.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm_ht"/>
+                    </record>
+
+                    <record id="tax_imm_60_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 6.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 6.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm_ht"/>
+                    </record>
+
+                    <record id="tax_imm_225_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 22.5%</field>
+                        <field name="code">TVA déductible sur immobilisations 22.5% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm_ht"/>
+                    </record>
+
+                    <record id="tax_imm_15_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 15.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 15.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm_ht"/>
+                    </record>
+
+                    <record id="tax_imm_70_ht" model="account.tax.code.template">
+                        <field name="name">Base H.T. 7.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 7.0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm_ht"/>
+                    </record>
+
+            <record id="tax_imm" model="account.tax.code.template">
+                <field name="name">TVA déductible pour immobilisations</field>
+                <field name="code">f)</field>
+                <field name="sign">1.00</field>
+                <field name="parent_id" ref="vat_code_chart_root"/>
+            </record>
+
+                    <record id="tax_imm_12" model="account.tax.code.template">
+                        <field name="name">TVA 12.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 12.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm"/>
+                    </record>
+                    
+                    <record id="tax_imm_13" model="account.tax.code.template">
+                        <field name="name">TVA 13.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 13.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm"/>
+                    </record>
+
+                    <record id="tax_imm_18" model="account.tax.code.template">
+                        <field name="name">TVA 18.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 18.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm"/>
+                    </record>
+                    
+                    <record id="tax_imm_19" model="account.tax.code.template">
+                        <field name="name">TVA 19.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 19.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm"/>
+                    </record>
+
+                    <record id="tax_imm_60" model="account.tax.code.template">
+                        <field name="name">TVA 6.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 6.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm"/>
+                    </record>
+
+                    <record id="tax_imm_225" model="account.tax.code.template">
+                        <field name="name">TVA 22.5%</field>
+                        <field name="code">TVA déductible sur immobilisations 22.5%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm"/>
+                    </record>
+
+                    <record id="tax_imm_15" model="account.tax.code.template">
+                        <field name="name">TVA 15.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 15.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm"/>
+                    </record>
+
+                    <record id="tax_imm_70" model="account.tax.code.template">
+                        <field name="name">TVA 7.0%</field>
+                        <field name="code">TVA déductible sur immobilisations 7.0%</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_imm"/>
+                    </record>
+
+            <record id="tax_0_ht" model="account.tax.code.template">
+                <field name="name">Base H.T. Opérations non imposables</field>
+                <field name="code">k)</field>
+                <field name="sign">1.00</field>
+                <field name="parent_id" ref="vat_code_chart_root"/>
+            </record>
+
+                    <record id="tax_export_0_ht" model="account.tax.code.template">
+                        <field name="name">Exportations</field>
+                        <field name="code">Exportations TVA 0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_0_ht"/>
+                    </record>
+
+                    <record id="tax_import_0_ht" model="account.tax.code.template">
+                        <field name="name">Achats import</field>
+                        <field name="code">Achats import TVA 0% (Base H.T.)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="tax_0_ht"/>
+                    </record>
+
+            <record id="autres taxes" model="account.tax.code.template">
+                <field name="name">Autres Taxes</field>
+                <field name="code">l)</field>
+                <field name="sign">1.00</field>
+                <field name="parent_id" ref="vat_code_chart_root"/>
+            </record>
+
+                    <record id="timbre_fiscal_col" model="account.tax.code.template">
+                        <field name="name">Timbre fiscal pour les transactions commerciales</field>
+                        <field name="code">Timbre fiscal collecté (transactions commerciales)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="autres taxes"/>
+                    </record>
+
+                    <record id="timbre_fiscal_deduc" model="account.tax.code.template">
+                        <field name="name">Timbre fiscal pour les transactions commerciales</field>
+                        <field name="code">Timbre fiscal acquitté(transactions commerciales)</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="autres taxes"/>
+                    </record>
+					<record id="fodec_col" model="account.tax.code.template">
+                        <field name="name">FODEC</field>
+                        <field name="code">FODEC collecté</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="autres taxes"/>
+                    </record>
+
+                    <record id="fodec_deduc" model="account.tax.code.template">
+                        <field name="name">FODEC</field>
+                        <field name="code">FODEC acquitté</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="autres taxes"/>
+                    </record>
+
+					<record id="dc_col" model="account.tax.code.template">
+                        <field name="name">DC</field>
+                        <field name="code">DC collecté</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="autres taxes"/>
+                    </record>
+
+                    <record id="dc_deduc" model="account.tax.code.template">
+                        <field name="name">DC</field>
+                        <field name="code">DC acquitté</field>
+                        <field name="sign">1.00</field>
+                        <field name="parent_id" ref="autres taxes"/>
+                    </record>
+
+
+
+        <!-- Chart template -->
+        <record id="l10n_tn_pcg_chart_template" model="account.chart.template">
+            <field name="name">Plan Comptable Général - Tunisie (1.20180118094500-beta)</field>
+            <field name="account_root_id" ref="pcg_0"/>
+            <field name="tax_code_root_id" ref="vat_code_chart_root"/>
+            <field name="bank_account_view_id" ref="tn_pcg_cash"/>
+            <field name="property_account_receivable" ref="tn_pcg_recv"/>
+            <field name="property_account_payable" ref="tn_pcg_pay"/>
+            <field name="property_account_expense_categ" ref="tn_pcg_expense"/>
+            <field name="property_account_expense" ref="tn_pcg_expense"/>
+            <field name="property_account_expense_opening" ref="pcg_121000"/>
+            <field name="property_account_income_categ" ref="tn_pcg_sale"/>
+            <field name="property_account_income" ref="tn_pcg_sale"/>
+            <field name="property_account_income_opening" ref="pcg_121000"/>
+                    <!-- 
+                    <field name="property_reserve_and_surplus_account" ref="pcg_131000"/>
+                    <field name="property_account_prepayable" ref="pcg_409100"/>
+                    <field name="property_account_prereceivable" ref="pcg_419100"/>
+                    -->
+
+
+        </record>
+
+    </data>
+</openerp>

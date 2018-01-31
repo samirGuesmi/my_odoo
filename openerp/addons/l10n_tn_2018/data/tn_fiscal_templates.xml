@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+       <!--Position fiscale -->
+
+        <record id="fiscal_position_template_assujetti_obligatoire" model="account.fiscal.position.template">
+            <field name="name">Assujetti Obligatoire (A)</field>
+            <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+            <field name="note">Assujetti Obligatoire (A)</field>
+        </record>
+
+        <record id="fiscal_position_template_assujetti_par_option" model="account.fiscal.position.template">
+            <field name="name">Assujetti par option (B)</field>
+            <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+            <field name="note">Assujetti par option (B)</field>
+        </record>
+
+        <record id="fiscal_position_template_assujetti_forfaitaire" model="account.fiscal.position.template">
+            <field name="name">Assujetti forfaitaire (F)</field>
+            <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+            <field name="note">Assujetti forfaitaire (F)</field>
+        </record>
+
+        <record id="fiscal_position_template_assujetti_partiel" model="account.fiscal.position.template">
+            <field name="name">Assujetti partiel (P)</field>
+            <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+            <field name="note">Assujetti partiel (P)</field>
+        </record>
+        
+        <record id="fiscal_position_template_vat_suspension" model="account.fiscal.position.template">
+            <field name="name">Vente(s) en suspension de TVA</field>
+            <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+            <field name="note">Vente(s) en suspension de TVA</field>
+        </record>
+
+        <record id="fiscal_position_template_import_export" model="account.fiscal.position.template">
+            <field name="name">Non assujetti (N) Import/Export</field>
+            <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+            <field name="note">Non assujetti (N) Import/Export</field>
+        </record>
+
+       <!--Taxe de remplacement : Assujetti Obligatoire (A) -->
+
+       <!--Taxe de remplacement : Assujetti par option (B) -->
+
+       <!--Taxe de remplacement : Assujetti forfaitaire (F) -->
+
+       <!--Taxe de remplacement : Assujetti forfaitaire (F) -->
+
+       <!--Taxe de remplacement : Assujetti partiel (P) -->
+       
+       <!--Taxe de remplacement : Vente(s) en suspension de TVA -->
+
+
+       <!--Taxe de remplacement : Non assujetti (N) Import/Export -->
+
+        <record id="fp_tax_template_impexp_vt_normale" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_template_import_export"/>
+            <field name="tax_src_id" ref="tva_normale"/>
+            <field name="tax_dest_id" ref="tva_export_0"/>
+        </record>
+
+        <record id="fp_tax_template_impexp_vt_specifique" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_template_import_export"/>
+            <field name="tax_src_id" ref="tva_specifique"/>
+            <field name="tax_dest_id" ref="tva_export_0"/>
+        </record>
+
+        <record id="fp_tax_template_impexp_vt_reduite" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_template_import_export"/>
+            <field name="tax_src_id" ref="tva_reduite"/>
+            <field name="tax_dest_id" ref="tva_export_0"/>
+        </record>
+
+        <record id="fp_tax_template_impexp_ha_normale" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_template_import_export"/>
+            <field name="tax_src_id" ref="tva_deduc_normale"/>
+            <field name="tax_dest_id" ref="tva_import_0"/>
+        </record>
+
+        <record id="fp_tax_template_impexp_imm_normale" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_template_import_export"/>
+            <field name="tax_src_id" ref="tva_imm_normale"/>
+            <field name="tax_dest_id" ref="tva_import_0"/>
+        </record>
+
+        <record id="fp_tax_template_impexp_ha_specifique" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_template_import_export"/>
+            <field name="tax_src_id" ref="tva_deduc_specifique"/>
+            <field name="tax_dest_id" ref="tva_import_0"/>
+        </record>
+
+        <record id="fp_tax_template_impexp_imm_specifique" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_template_import_export"/>
+            <field name="tax_src_id" ref="tva_imm_specifique"/>
+            <field name="tax_dest_id" ref="tva_import_0"/>
+        </record>
+
+        <record id="fp_tax_template_impexp_ha_reduite" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_template_import_export"/>
+            <field name="tax_src_id" ref="tva_deduc_reduite"/>
+            <field name="tax_dest_id" ref="tva_import_0"/>
+        </record>
+
+        <record id="fp_tax_template_impexp_imm_reduite" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_template_import_export"/>
+            <field name="tax_src_id" ref="tva_imm_reduite"/>
+            <field name="tax_dest_id" ref="tva_import_0"/>
+        </record>
+
+
+
+    </data>
+</openerp>

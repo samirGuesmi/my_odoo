@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="l10n_tn_view_partners_form" model="ir.ui.view">
+            <field name="name">view.res.partner.form.l10n_tn</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field eval="19" name="priority"/>
+            <field name="arch" type="xml">
+                    <field name="title" position="after">
+                        <field name="vat" domain="[('is_company', '=', True)]"
+                               context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': [('is_company','=', False)]}"/>
+                        <field name="company_registry" domain="[('is_company', '=', True)]"
+                               context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': [('is_company','=', False)]}"/>
+                        <field name="unique_fiscal_identification_number" placeholder="1234567" domain="[('is_company', '=', True)]"
+                               context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': [('is_company','=', False)]}"/>
+                        <field name="unique_fiscal_key_control" placeholder="Z" domain="[('is_company', '=', True)]"
+                               context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': [('is_company','=', False)]}"/>
+                        <field name="fiscal_code" domain="[('is_company', '=', True)]"
+                               context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': [('is_company','=', False)]}"/>
+                        <field name="fiscal_category_code" domain="[('is_company', '=', True)]"
+                               context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': [('is_company','=', False)]}"/>
+                        <field name="secondary_establishment_number" placeholder="000" domain="[('is_company', '=', True)]"
+                               context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': [('is_company','=', False)]}"/>
+                    </field>
+            </field>
+        </record>
+    </data>
+</openerp>
+
+
+
